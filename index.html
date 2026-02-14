@@ -1,1 +1,55 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Quieres ser mi Valentín?</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-r from-pink-400 to-red-400 flex items-center justify-center">
+
+  <div class="bg-white p-8 rounded-2xl shadow-xl text-center max-w-sm">
+    <h1 class="text-3xl font-bold mb-4 text-pink-600">
+      ¿Quieres ser mi Valentín? 💖
+    </h1>
+
+    <img 
+      src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" 
+      class="mx-auto rounded-lg mb-4"
+      alt="amor"
+    >
+
+    <div class="space-x-4">
+      <button 
+        onclick="aceptar()" 
+        class="bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-600"
+      >
+        Sí 💘
+      </button>
+
+      <button 
+        id="noBtn"
+        onclick="mover()" 
+        class="bg-gray-300 px-4 py-2 rounded-lg"
+      >
+        No 😢
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function aceptar() {
+      alert("Sabía que dirías que sí 💕 Te amo 😘");
+    }
+
+    function mover() {
+      const btn = document.getElementById("noBtn");
+      btn.style.position = "absolute";
+      btn.style.top = Math.random() * 80 + "%";
+      btn.style.left = Math.random() * 80 + "%";
+    }
+  </script>
+
+</body>
+</html>
